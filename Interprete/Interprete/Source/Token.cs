@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Interprete
+namespace Interprete.Source
 {
-    public class TokenType
+    public class Token
     {
     }
 }
