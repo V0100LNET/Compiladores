@@ -1,0 +1,15 @@
+C:\Users\valdo\Downloads\Materias de la escuela\Compiladores\Primer parcial\01-analisis_lexico\Compiladores\Interprete\Interprete\bin\Debug\net6.0\Interprete.exe
+C:\Users\valdo\Downloads\Materias de la escuela\Compiladores\Primer parcial\01-analisis_lexico\Compiladores\Interprete\Interprete\bin\Debug\net6.0\Interprete.deps.json
+C:\Users\valdo\Downloads\Materias de la escuela\Compiladores\Primer parcial\01-analisis_lexico\Compiladores\Interprete\Interprete\bin\Debug\net6.0\Interprete.runtimeconfig.json
+C:\Users\valdo\Downloads\Materias de la escuela\Compiladores\Primer parcial\01-analisis_lexico\Compiladores\Interprete\Interprete\bin\Debug\net6.0\Interprete.dll
+C:\Users\valdo\Downloads\Materias de la escuela\Compiladores\Primer parcial\01-analisis_lexico\Compiladores\Interprete\Interprete\bin\Debug\net6.0\Interprete.pdb
+C:\Users\valdo\Downloads\Materias de la escuela\Compiladores\Primer parcial\01-analisis_lexico\Compiladores\Interprete\Interprete\obj\Debug\net6.0\Interprete.csproj.AssemblyReference.cache
+C:\Users\valdo\Downloads\Materias de la escuela\Compiladores\Primer parcial\01-analisis_lexico\Compiladores\Interprete\Interprete\obj\Debug\net6.0\Interprete.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\valdo\Downloads\Materias de la escuela\Compiladores\Primer parcial\01-analisis_lexico\Compiladores\Interprete\Interprete\obj\Debug\net6.0\Interprete.AssemblyInfoInputs.cache
+C:\Users\valdo\Downloads\Materias de la escuela\Compiladores\Primer parcial\01-analisis_lexico\Compiladores\Interprete\Interprete\obj\Debug\net6.0\Interprete.AssemblyInfo.cs
+C:\Users\valdo\Downloads\Materias de la escuela\Compiladores\Primer parcial\01-analisis_lexico\Compiladores\Interprete\Interprete\obj\Debug\net6.0\Interprete.csproj.CoreCompileInputs.cache
+C:\Users\valdo\Downloads\Materias de la escuela\Compiladores\Primer parcial\01-analisis_lexico\Compiladores\Interprete\Interprete\obj\Debug\net6.0\Interprete.dll
+C:\Users\valdo\Downloads\Materias de la escuela\Compiladores\Primer parcial\01-analisis_lexico\Compiladores\Interprete\Interprete\obj\Debug\net6.0\refint\Interprete.dll
+C:\Users\valdo\Downloads\Materias de la escuela\Compiladores\Primer parcial\01-analisis_lexico\Compiladores\Interprete\Interprete\obj\Debug\net6.0\Interprete.pdb
+C:\Users\valdo\Downloads\Materias de la escuela\Compiladores\Primer parcial\01-analisis_lexico\Compiladores\Interprete\Interprete\obj\Debug\net6.0\Interprete.genruntimeconfig.cache
+C:\Users\valdo\Downloads\Materias de la escuela\Compiladores\Primer parcial\01-analisis_lexico\Compiladores\Interprete\Interprete\obj\Debug\net6.0\ref\Interprete.dll
