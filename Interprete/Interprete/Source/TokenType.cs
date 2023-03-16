@@ -33,23 +33,28 @@ namespace Interprete.Source
         TRUE,
         FALSE,
         NULL,
-        OPENING_ANGLE_BRACKET,    // <
-        CLOSING_ANGLE_BRACKET,    // >
         VERTICAL_BAR,             // OR 
-        AMPERSAND,                // and 
+        AMPERSAND,                // AND 
+        DOUBLE_EQUAL,             // ==
+        NOT_EQUAL_OF ,            // !=
+        OPENING_ANGLE_BRACKET,    // <
+        OPENING_BRACKET_EQUAL,    // <=
+        CLOSING_ANGLE_BRACKET,    // >
+        CLOSING_BRACKET_EQUAL,    // >=
         //SIGNOS DEL LENGUAJE
         EXCLAMATION_MARK,
         PERCENT_SIGN,
-        ASTERISK,
+        ASTERISK,                 // *
         LEST_PARENTHESIS,         // (
         RIGHT_PARENTHESIS,        // )
-        PLUS_SIGN,
+        PLUS_SIGN,                // +
         COMMA,    
-        PERIOD,                   // . 
-        BACKLASH,                 // \
-        MINUS_SIGN,               // -
-        EQUAL_SIGN,
-        QUESTION_MARK,          
+        PERIOD,                  // . 
+        BACKLASH,                // \
+        SLASH,                   // /
+        MINUS_SIGN,              // -
+        QUESTION_MARK,           // !
+        EQUAL_SIGN,              // =
         LEFT_BRACE,              // {
         RIGHT_BRACE,             // }
         LEFT_BRACKET,            // [
@@ -65,6 +70,13 @@ namespace Interprete.Source
         SUPER,
         THIS,
         NEW,
-        EOF
+        EOF,
+        PRINT,
+        OR,
+        AND,
+        COMMENTS_LINE,           // //
+        COMMENTS_LINE_AST_OPEN,  // /*
+        COMMENTS_LINE_AST_CLOSE, // */
+        IDENTIFIER
     }
 }
