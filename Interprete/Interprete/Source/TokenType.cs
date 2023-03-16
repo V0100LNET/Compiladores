@@ -22,6 +22,7 @@ namespace Interprete.Source
         LIST,
         CHAR,
         VAR,
+        NUMBER,
         //KEYWORDS DE BUCLES Y CONDICIONALES
         FOR,
         IN,

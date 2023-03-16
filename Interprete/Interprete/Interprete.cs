@@ -23,9 +23,9 @@ namespace Interprete
                 inputAux = Console.ReadLine().ToString();
                 Scanner scanner = new Scanner();
                 input.Append(inputAux);
-                scanner.ScannerInput(input);               //scanenado datos de entrada
+                scanner.ScannerInput(input);
             }
-            
+
         }
     }
 }
