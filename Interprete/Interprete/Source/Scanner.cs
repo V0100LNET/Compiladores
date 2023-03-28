@@ -58,64 +58,27 @@ namespace Interprete.Source
             return Keywords.ContainsKey(word);
         }
 
-        private void ValidateCharacters(char[] charArray, int index, char symbol)
+        private void AssignTokenNumber(char[] charArray, int index, int indexNum)
         {
-            //switch (symbol)
-            //{
-            //    case '(':
-            //        Tokens.Add(new Token(TokenType.LEST_PARENTHESIS, charArray[index].ToString(), "null", index));
-            //        break;
-            //    case ')':
-            //        Tokens.Add(new Token(TokenType.RIGHT_PARENTHESIS, charArray[index].ToString(), "null", index));
-            //        break;
-            //    case '{':
-            //        Tokens.Add(new Token(TokenType.OPENING_ANGLE_BRACKET, charArray[index].ToString(), "null", index));
-            //        break;
-            //    case '}':
-            //        Tokens.Add(new Token(TokenType.CLOSING_ANGLE_BRACKET, charArray[index].ToString(), "null", index));
-            //        break;
-            //    case ',':
-            //        Tokens.Add(new Token(TokenType.COMMA, charArray[index].ToString(), "null", index));
-            //        break;
-            //    case '.':
-            //        Tokens.Add(new Token(TokenType.PERIOD, charArray[index].ToString(), "null", index));
-            //        break;
-            //    case ';':
-            //        Tokens.Add(new Token(TokenType.SEMICOLON, charArray[index].ToString(), "null", index));
-            //        break;
-            //    case '-':
-            //        Tokens.Add(new Token(TokenType.MINUS_SIGN, charArray[index].ToString(), "null", index));
-            //        break;
-            //    case '+':
-            //        Tokens.Add(new Token(TokenType.PLUS_SIGN, charArray[index].ToString(), "null", index));
-            //        break;
-            //    case '*':
-            //        Tokens.Add(new Token(TokenType.ASTERISK, charArray[index].ToString(), "null", index));
-            //        break;
-            //    case '/':
-            //        Tokens.Add(new Token(TokenType.SLASH, charArray[index].ToString(), "null", index));
-            //        break;
-            //    case '!':
-            //        Tokens.Add(new Token(TokenType.QUESTION_MARK, charArray[index].ToString(), "null", index));
-            //        break;
-            //    case '=':
-            //        Tokens.Add(new Token(TokenType.EQUAL_SIGN, charArray[index].ToString(), "null", index));
-            //        break;
-            //    case '<':
-            //        Tokens.Add(new Token(TokenType.OPENING_ANGLE_BRACKET, charArray[index].ToString(), "null", index));
-            //        break;
-            //    case '>':
-            //        Tokens.Add(new Token(TokenType.CLOSING_ANGLE_BRACKET, charArray[index].ToString(), "null", index));
-            //        break;
-            //    default: break;
-            //}
+            int startIndex = GetIndexAux();
+            int endIndex = index - GetIndexAux();
 
+            string charactersToString = new string(charArray);
+            string word = charactersToString.Substring(0, charArray.Length-index);
+
+            Console.WriteLine(charArray);
+            Console.WriteLine(index);
+            Console.WriteLine(indexNum);
+            //Console.WriteLine(word);
+        }
+
+        private void ValidateCharacters(char[] charArray, int index, char letter)
+        {
             int startIndex = GetIndexAux();
             int endIndex = index - GetIndexAux();
             
             string charactersToString = new string(charArray);
             string word = charactersToString.Substring(startIndex, endIndex);
-
 
             if (IsKeyword(word))
             {
@@ -143,7 +106,7 @@ namespace Interprete.Source
                         Tokens.Add(new Token(TokenType.NULL, word, "null", 1));
                         break;
                     case "print":
-                        Tokens.Add(new Token(TokenType.PRINT, word, "lo que tenga dentro del print", 1));
+                        Tokens.Add(new Token(TokenType.PRINT, word, "null", 1));
                         break;
                     case "return":
                         Tokens.Add(new Token(TokenType.RETURN, word, "null", 1));
@@ -173,19 +136,75 @@ namespace Interprete.Source
                 }
             }
 
-            //if (!IsKeyword(word) && word.Length > 0)
-            //{
-            //    Tokens.Add(new Token(TokenType.IDENTIFIER, word, "null", 1));
-            //}
-
             if (!IsKeyword(word) && word.Length > 0)
             {
                 Tokens.Add(new Token(TokenType.IDENTIFIER, word, "null", 1));
             }
 
-            //Console.WriteLine(word);
-
             SetIndexAux(index + 1);
+        }
+
+        private int ValidateNumbers(char[] charArray, int index)
+        {
+            int indexNum;
+            for(indexNum=index; indexNum<charArray.Length; indexNum++)
+            {
+                switch (charArray[indexNum])
+                {
+                    case '(':
+                        AssignTokenNumber(charArray, index, indexNum);
+                        break;
+                    case ')':
+                        AssignTokenNumber(charArray, index, indexNum);
+                        break;
+                    case '{':
+                        AssignTokenNumber(charArray, index, indexNum);
+                        break;
+                    case '}':
+                        AssignTokenNumber(charArray, index, indexNum);
+                        break;
+                    case ',':
+                        AssignTokenNumber(charArray, index, indexNum);
+                        break;
+                    case '.':
+                        AssignTokenNumber(charArray, index, indexNum);
+                        break;
+                    case ';':
+                        AssignTokenNumber(charArray, index, indexNum);
+                        break;
+                    case '-':
+                        AssignTokenNumber(charArray, index, indexNum);
+                        break;
+                    case '+':
+                        AssignTokenNumber(charArray, index, indexNum);
+                        break;
+                    case '*':
+                        AssignTokenNumber(charArray, index, indexNum);
+                        break;
+                    case '/':
+                        AssignTokenNumber(charArray, index, indexNum);
+                        break;
+                    case '!':
+                        AssignTokenNumber(charArray, index, indexNum);
+                        break;
+                    case '=':
+                        AssignTokenNumber(charArray, index, indexNum);
+                        break;
+                    case '<':
+                        AssignTokenNumber(charArray, index, indexNum);
+                        break;
+                    case '>':
+                        AssignTokenNumber(charArray, index, indexNum);
+                        break;
+                    case '"':
+                        AssignTokenNumber(charArray, index, indexNum);
+                        break;
+                    default:
+                        break;
+                }
+            }
+            
+            return indexNum;
         }
 
         public void ScannerInput(StringBuilder input)
@@ -197,11 +216,7 @@ namespace Interprete.Source
             {
                 if (IsLetter(charArray[index]))
                 {
-                    continue;
-                }
-
-                if (IsNumber(charArray[index]))
-                {
+                    ValidateCharacters(charArray, index, charArray[index]);
                     continue;
                 }
 
@@ -223,51 +238,56 @@ namespace Interprete.Source
                         Tokens.Add(new Token(TokenType.CLOSING_ANGLE_BRACKET, charArray[index].ToString(), "null", index));
                         ValidateCharacters(charArray, index, charArray[index]);
                         break;
-                    case ',': 
+                    case ',':
                         ValidateCharacters(charArray, index, charArray[index]);
                         Tokens.Add(new Token(TokenType.COMMA, charArray[index].ToString(), "null", index));
                         break;
-                    case '.': 
+                    case '.':
                         ValidateCharacters(charArray, index, charArray[index]);
                         Tokens.Add(new Token(TokenType.PERIOD, charArray[index].ToString(), "null", index));
                         break;
-                    case ';': 
+                    case ';':
                         ValidateCharacters(charArray, index, charArray[index]);
                         Tokens.Add(new Token(TokenType.SEMICOLON, charArray[index].ToString(), "null", index));
                         break;
-                    case '-': 
+                    case '-':
                         ValidateCharacters(charArray, index, charArray[index]);
                         Tokens.Add(new Token(TokenType.MINUS_SIGN, charArray[index].ToString(), "null", index));
                         break;
-                    case '+': 
+                    case '+':
                         ValidateCharacters(charArray, index, charArray[index]);
                         Tokens.Add(new Token(TokenType.PLUS_SIGN, charArray[index].ToString(), "null", index));
                         break;
-                    case '*': 
+                    case '*':
                         ValidateCharacters(charArray, index, charArray[index]);
                         Tokens.Add(new Token(TokenType.ASTERISK, charArray[index].ToString(), "null", index));
                         break;
-                    case '/': 
+                    case '/':
                         ValidateCharacters(charArray, index, charArray[index]);
                         Tokens.Add(new Token(TokenType.SLASH, charArray[index].ToString(), "null", index));
                         break;
-                    case '!': 
+                    case '!':
                         ValidateCharacters(charArray, index, charArray[index]);
                         Tokens.Add(new Token(TokenType.QUESTION_MARK, charArray[index].ToString(), "null", index));
                         break;
-                    case '=': 
+                    case '=':
                         ValidateCharacters(charArray, index, charArray[index]);
                         Tokens.Add(new Token(TokenType.EQUAL_SIGN, charArray[index].ToString(), "null", index));
                         break;
-                    case '<': 
+                    case '<':
                         ValidateCharacters(charArray, index, charArray[index]);
                         Tokens.Add(new Token(TokenType.OPENING_ANGLE_BRACKET, charArray[index].ToString(), "null", index));
                         break;
-                    case '>': 
+                    case '>':
                         ValidateCharacters(charArray, index, charArray[index]);
                         Tokens.Add(new Token(TokenType.CLOSING_ANGLE_BRACKET, charArray[index].ToString(), "null", index));
                         break;
-                    default: break;
+                    case '"':
+                        ValidateCharacters(charArray, index, charArray[index]);
+                        Tokens.Add(new Token(TokenType.QUOTATION_MARK, charArray[index].ToString(), "null", index));
+                        break;
+                    default: 
+                        break;
                 }
             }
 
