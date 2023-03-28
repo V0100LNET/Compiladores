@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\valdo\\.nuget\\packages\\": {}
+    "C:\\Users\\oswaldo.hernandez\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\valdo\\Downloads\\Materias de la escuela\\Compiladores\\Primer parcial\\01-analisis_lexico\\Compiladores\\Interprete\\Interprete\\Interprete.csproj",
+      "projectUniqueName": "C:\\Users\\oswaldo.hernandez\\Downloads\\Repositorios\\Compiladores\\Interprete\\Interprete\\Interprete.csproj",
       "projectName": "Interprete",
-      "projectPath": "C:\\Users\\valdo\\Downloads\\Materias de la escuela\\Compiladores\\Primer parcial\\01-analisis_lexico\\Compiladores\\Interprete\\Interprete\\Interprete.csproj",
-      "packagesPath": "C:\\Users\\valdo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\valdo\\Downloads\\Materias de la escuela\\Compiladores\\Primer parcial\\01-analisis_lexico\\Compiladores\\Interprete\\Interprete\\obj\\",
+      "projectPath": "C:\\Users\\oswaldo.hernandez\\Downloads\\Repositorios\\Compiladores\\Interprete\\Interprete\\Interprete.csproj",
+      "packagesPath": "C:\\Users\\oswaldo.hernandez\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\oswaldo.hernandez\\Downloads\\Repositorios\\Compiladores\\Interprete\\Interprete\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\valdo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\oswaldo.hernandez\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -51,8 +51,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -61,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.310\\RuntimeIdentifierGraph.json"
       }
     }
   }

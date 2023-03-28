@@ -69,7 +69,6 @@ namespace Interprete.Source
             Console.WriteLine(charArray);
             Console.WriteLine(index);
             Console.WriteLine(indexNum);
-            //Console.WriteLine(word);
         }
 
         private void ValidateCharacters(char[] charArray, int index, char letter)
