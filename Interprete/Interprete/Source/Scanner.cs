@@ -216,7 +216,6 @@ namespace Interprete.Source
             {
                 if (IsLetter(charArray[index]))
                 {
-                    ValidateCharacters(charArray, index, charArray[index]);
                     continue;
                 }
 

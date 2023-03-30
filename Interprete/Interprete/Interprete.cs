@@ -1,4 +1,10 @@
-﻿using Interprete.Menu;
+﻿/*
+ * Nombre: Oswaldo Hernandez Velasquez
+ * Práctica: Práctica 1
+ * Materia: Compiladores
+ * Número de boleta: 2017630781
+ */
+using Interprete.Menu;
 using Interprete.Source;
 using System;
 using System.Text;
